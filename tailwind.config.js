@@ -12,7 +12,7 @@ module.exports = {
       red: '#DB2E4D',
       darkRed: '#9D1634',
       blue: '#4664F4',
-      darkBlue: '#2A45C2'
+      darkBlue: '#2A45C2',
     },
     extend: {},
   },

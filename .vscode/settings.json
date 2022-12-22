@@ -1,4 +1,4 @@
 {
   "css.lint.unknownAtRules": "ignore",
-  // "files.associations": {"*.css": "tailwindcss"}
+  "files.associations": {"*.css": "tailwindcss"}
 }
