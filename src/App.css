@@ -1,5 +1,32 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Barlow Semi Condensed', normal;
+  font-family: "Barlow Semi Condensed", normal;
+}
+
+#triangle {
+  background: url("./assets/images/bg-triangle.svg") center center no-repeat;
+  background-size: 287px 254px;
+  height: 430px;
+  width: 476px;
+}
+
+.choiceCircle {
+  padding: 23px 23px 19px 23px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: rgba(255, 255, 255, 0.05) solid 0px;
+  transition: outline 0.2s;
+}
+.choiceCircle:hover {
+  outline: rgba(255, 255, 255, 0.05) solid 24px;
+}
+.choice {
+  background-color: theme("colors.white");
+  width: fit-content;
+  padding: 24px 28px;
+  border-radius: 50%;
+  border-top: 8px solid theme("colors.circle");
+  width: 152px;
+  height: 152px;
 }
