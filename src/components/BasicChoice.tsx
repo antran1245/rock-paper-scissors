@@ -1,6 +1,4 @@
-import paper from "../assets/images/icon-paper.svg";
-import rock from "../assets/images/icon-rock.svg";
-import scissors from "../assets/images/icon-scissors.svg";
+import Choice from "./Choice";
 
 export default function BasicChoice() {
   return (
@@ -9,16 +7,10 @@ export default function BasicChoice() {
       className="mx-auto flex flex-col justify-between items-center mt-[64px]"
     >
       <div className="flex justify-between w-full">
-        <div className="choiceCircle bg-blue border-b-[9px] border-darkBlue w-fit">
-          <img src={paper} alt="paper" className="choice" />
-        </div>
-        <div className="choiceCircle bg-gold border-b-[9px] border-darkGold w-fit">
-          <img src={scissors} alt="scissors" className="choice" />
-        </div>
+        <Choice choose="paper" />
+        <Choice choose="scissors" />
       </div>
-      <div className="choiceCircle bg-red border-b-[9px] border-darkRed w-fit">
-        <img src={rock} alt="rock" className="choice" />
-      </div>
+      <Choice choose="rock" />
     </div>
   );
 }

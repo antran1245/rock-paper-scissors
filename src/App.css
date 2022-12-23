@@ -29,4 +29,7 @@
   border-top: 8px solid theme("colors.circle");
   width: 152px;
   height: 152px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
