@@ -7,10 +7,10 @@ export default function BasicChoice() {
       className="mx-auto flex flex-col justify-between items-center mt-[64px]"
     >
       <div className="flex justify-between w-full">
-        <Choice choose="paper" />
-        <Choice choose="scissors" />
+        <Choice choose="paper" size="small" />
+        <Choice choose="scissors" size="small" />
       </div>
-      <Choice choose="rock" />
+      <Choice choose="rock" size="small" />
     </div>
   );
 }

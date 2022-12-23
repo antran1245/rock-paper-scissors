@@ -12,24 +12,36 @@
 }
 
 .choiceCircle {
-  padding: 23px 23px 19px 23px;
   border-radius: 50%;
   cursor: pointer;
+}
+.choiceCircle.small {
+  padding: 23px 23px 19px 23px;
   outline: rgba(255, 255, 255, 0.05) solid 0px;
   transition: outline 0.2s;
 }
-.choiceCircle:hover {
+.choiceCircle.big {
+  padding: 34px 34px 28px 34px;
+}
+.choiceCircle.small:hover {
   outline: rgba(255, 255, 255, 0.05) solid 24px;
 }
 .choice {
   background-color: theme("colors.white");
   width: fit-content;
-  padding: 24px 28px;
   border-radius: 50%;
   border-top: 8px solid theme("colors.circle");
-  width: 152px;
-  height: 152px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.choice.small {
+  padding: 24px 28px;
+  width: 152px;
+  height: 152px;
+}
+.choice.big {
+  padding: 35px 41px;
+  width: 225px;
+  height: 225px;
 }
