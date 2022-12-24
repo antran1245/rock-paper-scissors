@@ -32,6 +32,7 @@ export default function PickedChoice({ set }: PickedChoiceProps) {
         setWinner("house");
       } else if (context.picked !== basic) {
         setWinner("you");
+        context.setCount(++context.count)
       } else if (context.picked === basic) {
         setWinner("draw");
       }
@@ -60,24 +61,26 @@ export default function PickedChoice({ set }: PickedChoiceProps) {
       </div>
 
       {/* Text and button to play again */}
-      {
-        winner === 'you' || winner === 'house' || winner === 'draw' ?
-          <div className="outcome w-[40%] text-center">
-            <p className="text-white font-[700] text-[56px] leading-[67px] mb-[16px]">
-              {
-                winner === 'you' ?
-                  'YOU WIN'
-                  : winner === 'draw' ? 'DRAW' :
-                    'YOU LOSE'
-              }
-            </p>
-            <button
-              className="bg-white rounded-[8px] py-[15px] px-[60px] text-background text-[16px] font-[600] leading-[19px] tracking-[2.5px] hover:text-red"
-              onClick={() => context.setPicked(null)}>
-              PLAY AGAIN
-            </button>
-          </div> : null
-      }
+      <div className="w-[40%] flex justify-center">
+        {
+          winner === 'you' || winner === 'house' || winner === 'draw' ?
+            <div className="outcome text-center w-full">
+              <p className="text-white font-[700] text-[56px] leading-[67px] mb-[16px]">
+                {
+                  winner === 'you' ?
+                    'YOU WIN'
+                    : winner === 'draw' ? 'DRAW' :
+                      'YOU LOSE'
+                }
+              </p>
+              <button
+                className="bg-white rounded-[8px] py-[15px] px-[60px] text-background text-[16px] font-[600] leading-[19px] tracking-[2.5px] hover:text-red"
+                onClick={() => context.setPicked(null)}>
+                PLAY AGAIN
+              </button>
+            </div> : null
+        }
+      </div>
       {/* 
         House Picked
       */}

@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import logo from "../assets/images/logo.svg";
+import { PickedContext } from "../contexts/PickedContext";
 
 export default function Scoreboard() {
+  const { count } = useContext(PickedContext)
   return (
     <div className="border-white/20 mx-auto py-[18px] border-[3px] rounded-[15px] w-[100%] max-w-[700px] pl-[33px] pr-[24px] flex justify-between">
       <img src={logo} alt="logo" />
@@ -9,7 +12,7 @@ export default function Scoreboard() {
           SCORE
         </p>
         <p className="text-[#565468] font-[700] text-[64px] leading-[64px]">
-          0
+          {count}
         </p>
       </div>
     </div>
