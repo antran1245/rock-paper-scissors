@@ -29,7 +29,7 @@ export default function Choice({ choose, size }: ChoiceProps) {
   const { setPicked } = context;
   return (
     <div
-      className={`choiceCircle border-b-[9px] w-fit relative z-[2] ${choices[choose].background}  ${choices[choose].borderColor} ${size}`}
+      className={`choiceCircle border-b-[9px] sm:border-b-[5px] w-fit relative z-[2] ${choices[choose].background}  ${choices[choose].borderColor} ${size}`}
       onClick={() => setPicked(size === 'big' ? null : choose)}
     >
       {choose === "rock" ? (
