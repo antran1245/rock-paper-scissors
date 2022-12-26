@@ -40,7 +40,7 @@ export default function PickedChoice({ set }: PickedChoiceProps) {
     return () => clearTimeout(timer)
   }
   return (
-    <div className="mx-auto flex justify-between items-center mb-[72px] w-[70%] h-fit">
+    <div className="mx-auto flex justify-between items-center mb-[72px] w-[50%] h-fit lg:w-[90%] md:w-[100%] xl:w-[80%]">
 
       {/* 
         You Picked
@@ -74,7 +74,7 @@ export default function PickedChoice({ set }: PickedChoiceProps) {
                 }
               </p>
               <button
-                className="bg-white rounded-[8px] py-[15px] px-[60px] text-background text-[16px] font-[600] leading-[19px] tracking-[2.5px] hover:text-red"
+                className="bg-white rounded-[8px] py-[15px] px-[60px] text-background text-[16px] font-[600] leading-[19px] tracking-[2.5px] hover:text-red lg:px-[50px]"
                 onClick={() => context.setPicked(null)}>
                 PLAY AGAIN
               </button>

@@ -14,6 +14,11 @@ module.exports = {
       blue: '#4664F4',
       darkBlue: '#2A45C2',
     },
+    screens: {
+      "xl": { 'max': '1280px' },
+      "lg": { 'max': "1024px" },
+      "md": { 'max': "986px" },
+    },
     extend: {},
   },
   plugins: [],
