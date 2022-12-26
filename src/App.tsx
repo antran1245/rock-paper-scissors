@@ -19,7 +19,7 @@ function App() {
             <Rules setShowRules={setShowRules} /> : null
         }
         {picked === null ? <BasicChoice /> : <PickedChoice set={["rock", "paper", "scissors"]} />}
-        <button className="self-end border-white border-[1px] rounded-[8px] py-[11px] px-[37px] mr-[32px] text-[16px] text-white tracking-[2.5px] leading-[19px] font-[600] hover:bg-white hover:text-background"
+        <button className="self-end border-white border-[1px] rounded-[8px] py-[11px] px-[37px] mr-[32px] text-[16px] text-white tracking-[2.5px] leading-[19px] font-[600] md:self-center md:mr-0 hover:bg-white hover:text-background"
           onClick={() => setShowRules(!showRules)}>
           RULES
         </button>

@@ -12,8 +12,12 @@
 #triangle {
   background: url("./assets/images/bg-triangle.svg") center center no-repeat;
   background-size: 287px 254px;
-  height: 430px;
-  width: 476px;
+  max-height: 430px;
+  max-width: 476px;
+  height: 100%;
+  width: 100%;
+  min-height: 282px;
+  min-width: 312px;
 }
 
 /* The border of the choices */
@@ -47,13 +51,13 @@
   padding: 24px 28px;
   width: 152px;
   height: 152px;
-  min-width: 125px;
+  min-width: 100px;
 }
 .choice.big {
   padding: 35px 41px;
   width: 225px;
   height: 225px;
-  min-width: 125px;
+  min-width: 100px;
 }
 
 /* winner styles
@@ -91,5 +95,26 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #triangle {
+    background-size: 180 188px;
+  }
+  .choice.small,
+  .choice.big {
+    width: 100px;
+    height: 100px;
+    padding: 15px 14px 12px 15px;
+  }
+  .winner {
+    box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 0px 37px;
+  }
+  .winner2 {
+    box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 0px 90px;
+  }
+  .winner3 {
+    box-shadow: rgba(255, 255, 255, 0.05) 0px 0px 0px 150px;
   }
 }

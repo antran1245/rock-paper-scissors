@@ -4,7 +4,7 @@ export default function BasicChoice() {
   return (
     <div
       id="triangle"
-      className="mx-auto flex flex-col justify-between items-center mt-[64px]"
+      className="mx-auto flex flex-col justify-between items-center mt-[64px] sm:mt-0"
     >
       <div className="flex justify-between w-full">
         <Choice choose="paper" size="small" />
