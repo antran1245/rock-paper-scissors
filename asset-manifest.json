@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/rock-paper-scissors/static/css/main.61640484.css",
+    "main.js": "/rock-paper-scissors/static/js/main.3b9ee7b9.js",
+    "static/js/787.c8ffd4a8.chunk.js": "/rock-paper-scissors/static/js/787.c8ffd4a8.chunk.js",
+    "static/media/logo-bonus.svg": "/rock-paper-scissors/static/media/logo-bonus.9bf8aeb80c2526dee7c67aa5c1b74ccc.svg",
+    "static/media/image-rules-bonus.svg": "/rock-paper-scissors/static/media/image-rules-bonus.513320fbf32ba9e4a81fba903a77b85f.svg",
+    "static/media/logo.svg": "/rock-paper-scissors/static/media/logo.a4a2b39fefcdb6a1a8088c4dba8f3d93.svg",
+    "static/media/image-rules.svg": "/rock-paper-scissors/static/media/image-rules.258b753fb6284dc8ae00c5b2fa7938c0.svg",
+    "static/media/icon-lizard.svg": "/rock-paper-scissors/static/media/icon-lizard.0f83914cca1adc9454d1bdceb17610b0.svg",
+    "static/media/icon-paper.svg": "/rock-paper-scissors/static/media/icon-paper.8b57a6b108c1b8ae82931a39b10f96a2.svg",
+    "static/media/icon-spock.svg": "/rock-paper-scissors/static/media/icon-spock.f4d7eee84cf50913d73967948d97d63a.svg",
+    "index.html": "/rock-paper-scissors/index.html",
+    "static/media/icon-scissors.svg": "/rock-paper-scissors/static/media/icon-scissors.3b1a5d7eb0b2f1fd3e955865ec04d9ed.svg",
+    "static/media/icon-rock.svg": "/rock-paper-scissors/static/media/icon-rock.476e90a9646a87bb3645d2f09f4f7fba.svg",
+    "static/media/icon-close.svg": "/rock-paper-scissors/static/media/icon-close.bde602ecd1a4e55e0c27137ed651e027.svg",
+    "static/media/bg-pentagon.svg": "/rock-paper-scissors/static/media/bg-pentagon.1ad6d36532b75eb7d82c.svg",
+    "static/media/bg-triangle.svg": "/rock-paper-scissors/static/media/bg-triangle.77c6ca418d3751d8f717.svg",
+    "main.61640484.css.map": "/rock-paper-scissors/static/css/main.61640484.css.map",
+    "main.3b9ee7b9.js.map": "/rock-paper-scissors/static/js/main.3b9ee7b9.js.map",
+    "787.c8ffd4a8.chunk.js.map": "/rock-paper-scissors/static/js/787.c8ffd4a8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.61640484.css",
+    "static/js/main.3b9ee7b9.js"
+  ]
+}
