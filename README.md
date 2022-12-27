@@ -4,6 +4,8 @@ Recreate the **Rock, Paper, Scissors** game with **Tailwind CSS**
 
 The game will also include additional options.
 
+[Live Link](https://antran1245.github.io/rock-paper-scissors/)
+
 # Packages
 
 - Tailwind CSS
