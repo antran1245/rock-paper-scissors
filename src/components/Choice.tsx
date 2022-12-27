@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import { PickedContext } from "../contexts/PickedContext";
-import paper from "../assets/images/icon-paper.svg";
-import scissors from "../assets/images/icon-scissors.svg";
-import rock from "../assets/images/icon-rock.svg";
+import { ReactComponent as Paper } from "../assets/images/icon-paper.svg";
+import { ReactComponent as Scissors } from "../assets/images/icon-scissors.svg";
+import { ReactComponent as Rock } from "../assets/images/icon-rock.svg";
+import { ReactComponent as Spock } from "../assets/images/icon-spock.svg";
+import { ReactComponent as Lizard } from "../assets/images/icon-lizard.svg";
 
 interface ChoiceProps {
   choose: string;
@@ -22,6 +24,14 @@ const choices: { [key: string]: any } = {
     background: "bg-gold",
     borderColor: "border-darkGold",
   },
+  spock: {
+    background: "bg-aqua",
+    borderColor: "border-darkAqua"
+  },
+  lizard: {
+    background: "bg-purple",
+    borderColor: "border-darkPurple"
+  }
 };
 
 export default function Choice({ choose, size }: ChoiceProps) {
@@ -33,13 +43,29 @@ export default function Choice({ choose, size }: ChoiceProps) {
       onClick={() => setPicked(size === 'big' ? null : choose)}
     >
       {choose === "rock" ? (
-        <img src={rock} alt={`rock`} className={`choice ${size}`} />
+        <div className={`choice ${size}`}>
+          <Rock />
+        </div>
       ) : null}
       {choose === "paper" ? (
-        <img src={paper} alt={`paper`} className={`choice ${size}`} />
+        <div className={`choice ${size}`}>
+          <Paper />
+        </div>
       ) : null}
       {choose === "scissors" ? (
-        <img src={scissors} alt={`scissors`} className={`choice ${size}`} />
+        <div className={`choice ${size}`}>
+          <Scissors />
+        </div>
+      ) : null}
+      {choose === "spock" ? (
+        <div className={`choice ${size}`}>
+          <Spock />
+        </div>
+      ) : null}
+      {choose === "lizard" ? (
+        <div className={`choice ${size}`}>
+          <Lizard />
+        </div>
       ) : null}
     </div>
   );

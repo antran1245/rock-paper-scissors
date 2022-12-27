@@ -1,44 +1,78 @@
-import { useContext, useEffect, useState } from "react";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import { PickedContext } from "../contexts/PickedContext";
 import Choice from "./Choice";
 
 interface PickedChoiceProps {
   set: string[];
+  setCount: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export default function PickedChoice({ set }: PickedChoiceProps) {
+export default function PickedChoice({ set, setCount }: PickedChoiceProps) {
   const context = useContext(PickedContext);
   const [compPicked, setCompPicked] = useState<string | null>(null);
   const [winner, setWinner] = useState<"you" | "house" | "draw" | null>(null);
-  const basic = [...set][Math.floor(Math.random() * 3)];
+  const basic = [...set][Math.floor(Math.random() * set.length)]
 
+  /**
+   * Delay set up of what the house choose.
+   */
   useEffect(() => {
     const timer = setTimeout(() => {
-      setCompPicked(basic);
-      chooseWinner()
+      if (compPicked === null) {
+        setCompPicked(basic);
+      }
     }, 700);
     return () => {
       clearTimeout(timer);
     }
-  }, []);
+  }, [basic, compPicked]);
 
-  const chooseWinner = () => {
-    const timer = setTimeout(() => {
-      if (context.picked === "rock" && basic === "paper") {
-        setWinner("house");
-      } else if (context.picked === "paper" && basic === "scissors") {
-        setWinner("house");
-      } else if (context.picked === "scissors" && basic === "rock") {
-        setWinner("house");
-      } else if (context.picked !== basic) {
-        setWinner("you");
-        context.setCount(++context.count)
-      } else if (context.picked === basic) {
+  /**
+   * increase count on very win
+   */
+  const increaseCount = useCallback(() => {
+    setCount(c => c + 1)
+  }, [setCount])
+
+  /**
+   * Determine if the user win or the house win.
+   */
+  useEffect(() => {
+    const timer1 = setTimeout(() => {
+      if (context.bonus) {
+        if (context.picked === "rock" && (compPicked === "paper" || compPicked === "spock")) {
+          setWinner("house");
+        } else if (context.picked === "paper" && (compPicked === "scissors" || compPicked === "lizard")) {
+          setWinner("house");
+        } else if (context.picked === "scissors" && (compPicked === "rock" || compPicked === "spock")) {
+          setWinner("house");
+        } else if (context.picked === "spock" && (compPicked === "lizard" || compPicked === "paper")) {
+          setWinner("house");
+        } else if (context.picked === "lizard" && (compPicked === "rock" || compPicked === "scissors")) {
+          setWinner("house");
+        } else if (context.picked !== compPicked) {
+          setWinner("you");
+          increaseCount()
+        }
+      } else {
+        if (context.picked === "rock" && compPicked === "paper") {
+          setWinner("house");
+        } else if (context.picked === "paper" && compPicked === "scissors") {
+          setWinner("house");
+        } else if (context.picked === "scissors" && compPicked === "rock") {
+          setWinner("house");
+        } else if (context.picked !== compPicked) {
+          setWinner("you");
+          increaseCount()
+        }
+      }
+      if (context.picked === compPicked) {
         setWinner("draw");
       }
     }, 1000);
-    return () => clearTimeout(timer)
-  }
+    return () => clearTimeout(timer1)
+  }, [compPicked, context.bonus, context.picked, increaseCount])
+
   return (
     <div className="mx-auto flex mb-[72px] w-[50%] h-fit lg:w-[90%] md:w-[100%] xl:w-[80%] md:flex-col md:items-center md:mt-[99px]">
       <div className="flex justify-between items-center w-full">

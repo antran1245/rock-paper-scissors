@@ -13,6 +13,10 @@ module.exports = {
       darkRed: '#9D1634',
       blue: '#4664F4',
       darkBlue: '#2A45C2',
+      aqua: '#3FB7CD',
+      darkAqua: '#2D8DAB',
+      purple: '#834EE3',
+      darkPurple: '#5F37A8'
     },
     screens: {
       "xl": { 'max': '1280px' },
